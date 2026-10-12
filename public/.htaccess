@@ -1,0 +1,4 @@
+# Apache (cPanel): send the bare root to the default locale.
+# Temporary (302) while the setup is being tested; switch to 301 for production.
+RewriteEngine On
+RewriteRule ^$ /hy/ [R=302,L]
