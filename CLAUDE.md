@@ -4,7 +4,7 @@
 
 Simple public information site about the Armenian Gymnastics Federation (`armgymnastics.am`). Planned v1 pages: Home, About, Disciplines, News, Contact (not final, discuss first). Client: Doping Space. Armenian + English. A sibling site (`echyerevan2027.com`, the 2027 European Championships in Yerevan) lives in a separate repo.
 
-Full context, decisions and open items: [docs/project-context.md](docs/project-context.md). Read it first. `docs/` is gitignored, so keep it in sync with `../docs/project-context.md` when you change it. Hosting notes for this domain are in `../docs/cpanel-armgymnastics.md`.
+Shared context for both sites: `../docs/project-context.md`. Context specific to this site (status, decision log, federation content notes): [docs/project-context.md](docs/project-context.md). Read both first. `docs/` is gitignored. Put site-specific notes here and cross-cutting ones in the parent `../docs/`; do not duplicate. Hosting notes for this domain are in `../docs/cpanel-armgymnastics.md`.
 
 ## Hard constraints
 
@@ -31,4 +31,4 @@ Next.js 16 (App Router, root `app/` dir, no `src/`), React 19, TypeScript, Tailw
 - Be direct and concise. Ask before drafting rather than assuming.
 - The developer is new to freelance hosting and deployment. Briefly explain new hosting or tooling terms.
 - Design, page list and content are not decided yet (waiting for the federation's brand book and reference research). Do not invent them. Discuss first.
-- Update `docs/project-context.md` (decision log) when a decision changes.
+- Update `docs/project-context.md` (this site's decision log) when a decision changes; the parent log only gets cross-cutting decisions.

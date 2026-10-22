@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@theme {
+  /* Sampled from the federation logo (Armenian tricolour) */
+  --color-fed-red: #ee3236;
+  --color-fed-blue: #354e9a;
+  --color-fed-orange: #f58634;
+
+  /* Derived, not in the logo: a darker blue for text and footers, a darker red for small red text */
+  --color-fed-blue-deep: #1b2a5c;
+  --color-fed-red-deep: #c4161a;
+
+  /* Neutrals */
+  --color-fed-grey: #f3f4f8;
+  --color-fed-ink: #14193a;
+
+  /* Brand font is not chosen yet; Noto Sans Armenian covers hy and Latin falls back to the system font */
+  --font-sans: "Noto Sans Armenian", system-ui, sans-serif;
+}
+
+/* Role tokens: use these in components, not the fed-* colours directly */
+@theme inline {
+  --color-brand: var(--color-fed-blue);
+  --color-brand-deep: var(--color-fed-blue-deep);
+  --color-accent: var(--color-fed-red);
+  --color-accent-deep: var(--color-fed-red-deep);
+  --color-highlight: var(--color-fed-orange);
+  --color-surface: var(--color-fed-grey);
+  --color-ink: var(--color-fed-ink);
+}
+
+/* Temporary page defaults until the design is decided */
+body {
+  background-color: #ffffff;
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
