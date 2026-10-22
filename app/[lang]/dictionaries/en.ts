@@ -7,6 +7,12 @@ const en = {
   home: {
     heading: "Armenian Gymnastics Federation",
   },
+  about: {
+    sections: "Sections",
+    allSections: "All sections",
+    previous: "Previous",
+    next: "Next",
+  },
 };
 
 export type Dictionary = typeof en;

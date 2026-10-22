@@ -10,6 +10,12 @@ const hy: Dictionary = {
   home: {
     heading: "Հայաստանի մարմնամարզության ֆեդերացիա",
   },
+  about: {
+    sections: "Բաժիններ",
+    allSections: "Բոլոր բաժինները",
+    previous: "Նախորդ",
+    next: "Հաջորդ",
+  },
 };
 
 export default hy;
