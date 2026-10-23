@@ -4,6 +4,15 @@ const en = {
     description:
       "Official website of the Armenian Gymnastics Federation.",
   },
+  nav: {
+    label: "Main",
+    menu: "Menu",
+    about: "About",
+  },
+  languages: {
+    hy: "Հայերեն",
+    en: "English",
+  },
   home: {
     heading: "Armenian Gymnastics Federation",
   },
@@ -12,6 +21,7 @@ const en = {
     allSections: "All sections",
     previous: "Previous",
     next: "Next",
+    empty: "This content is not available in this language yet.",
   },
 };
 

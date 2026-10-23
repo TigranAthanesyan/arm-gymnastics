@@ -38,14 +38,16 @@ const about: Partial<Record<Locale, () => Promise<About>>> = {
     ),
 };
 
-/** Locales that have content files; routes only generate pages for these. */
-export const aboutLocales = Object.keys(about) as Locale[];
+const emptyAbout: About = {
+  cover: { title: "", place: "", year: 0 },
+  sections: [],
+};
 
+/** A locale without a content file gets an empty About, so its pages render empty instead of 404. */
 export const getAbout = async (locale?: string): Promise<About> => {
   const current = locale ?? (await lang());
-  const load = hasLocale(current) ? about[current] : undefined;
-  if (!load) notFound();
-  return load();
+  if (!hasLocale(current)) notFound();
+  return about[current]?.() ?? emptyAbout;
 };
 
 type ImageEntry = {

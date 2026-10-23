@@ -2,17 +2,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { lang } from "next/root-params";
 import { SectionBody } from "@/components/blocks";
-import { aboutLocales, getAbout } from "@/lib/content";
-import { getDictionary } from "../../dictionaries";
+import { getAbout } from "@/lib/content";
+import { defaultLocale, getDictionary, locales } from "../../dictionaries";
 
+// Section ids are language-neutral, so every locale gets the default locale's ids;
+// a locale without content renders the "not available" note instead of 404.
 export async function generateStaticParams() {
-  const params = await Promise.all(
-    aboutLocales.map(async (lang) => {
-      const { sections } = await getAbout(lang);
-      return sections.map(({ id }) => ({ lang, section: id }));
-    }),
+  const { sections } = await getAbout(defaultLocale);
+  return locales.flatMap((lang) =>
+    sections.map(({ id }) => ({ lang, section: id })),
   );
-  return params.flat();
 }
 
 export async function generateMetadata({
@@ -33,15 +32,27 @@ export default async function AboutSection({
     lang(),
   ]);
 
+  const link = "text-brand underline hover:text-accent-deep";
+
+  if (sections.length === 0) {
+    return (
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
+        <Link href={`/${locale}/about/`} className={link}>
+          ← {dict.about.allSections}
+        </Link>
+        <p className="mt-6">{dict.about.empty}</p>
+      </main>
+    );
+  }
+
   const index = sections.findIndex((s) => s.id === id);
   if (index === -1) notFound();
   const section = sections[index];
   const previous = sections[index - 1];
   const next = sections[index + 1];
-  const link = "text-brand underline hover:text-accent-deep";
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
+    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-10">
       <Link href={`/${locale}/about/`} className={link}>
         ← {dict.about.allSections}
       </Link>
@@ -49,7 +60,8 @@ export default async function AboutSection({
         {section.title}
       </h1>
       <SectionBody section={section} lang={locale} />
-      <nav className="mt-12 flex justify-between gap-4 border-t border-surface pt-4">
+      <div className="min-h-12 flex-1" />
+      <nav className="mt-auto flex justify-between gap-4 border-t border-surface pt-4">
         {previous ? (
           <Link href={`/${locale}/about/${previous.id}/`} className={link}>
             ← {dict.about.previous}: {previous.title}
