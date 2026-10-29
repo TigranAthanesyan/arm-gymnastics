@@ -14,6 +14,9 @@
   --color-fed-grey: #f3f4f8;
   --color-fed-ink: #14193a;
 
+  /* Background disc of the logo, so the logo blends into the header */
+  --color-fed-blush: #fcf2fb;
+
   /* Brand font is not chosen yet; Noto Sans Armenian covers hy and Latin falls back to the system font */
   --font-sans: "Noto Sans Armenian", system-ui, sans-serif;
 }
@@ -27,6 +30,7 @@
   --color-highlight: var(--color-fed-orange);
   --color-surface: var(--color-fed-grey);
   --color-ink: var(--color-fed-ink);
+  --color-header: var(--color-fed-blush);
 }
 
 /* Temporary page defaults until the design is decided */

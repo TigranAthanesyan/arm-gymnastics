@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Locale } from "@/app/[lang]/dictionaries";
@@ -20,7 +21,7 @@ export function LanguageSwitcher({
   const rest = pathname.replace(/^\/[^/]+/, "") || "/";
 
   return (
-    <ul className="flex gap-4 md:justify-self-end">
+    <ul className="flex gap-3 md:justify-self-end">
       {locales.map((locale) => (
         <li key={locale}>
           <Link
@@ -29,13 +30,21 @@ export function LanguageSwitcher({
             hrefLang={locale}
             lang={locale}
             aria-current={locale === current ? "true" : undefined}
-            className={
+            aria-label={labels[locale]}
+            title={labels[locale]}
+            className={`block size-8 overflow-hidden rounded-full ring-2 ring-offset-2 transition-opacity ${
               locale === current
-                ? "font-bold text-brand-deep"
-                : "text-brand underline hover:text-accent-deep"
-            }
+                ? "ring-brand-deep"
+                : "opacity-50 ring-transparent hover:opacity-100"
+            }`}
           >
-            {labels[locale]}
+            <Image
+              src={`/images/flags/${locale}.svg`}
+              alt=""
+              width={32}
+              height={32}
+              className="size-full object-cover"
+            />
           </Link>
         </li>
       ))}

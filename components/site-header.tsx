@@ -2,38 +2,43 @@ import Image from "next/image";
 import Link from "next/link";
 import { lang } from "next/root-params";
 import { getDictionary, hasLocale, locales } from "@/app/[lang]/dictionaries";
-import { SiteNav } from "./site-nav";
+import type { Dictionary } from "@/app/[lang]/dictionaries/en";
+import { SiteNav, type NavItem } from "./site-nav";
+
+// Add a page to the menu here: `path` is the route under /<lang>/, `label` comes from dict.nav.
+const navItems = (dict: Dictionary): NavItem[] => [
+  { path: "about", label: dict.nav.about },
+  { path: "athletes", label: dict.nav.athletes },
+  { path: "coaches", label: dict.nav.coaches },
+  { path: "elements", label: dict.nav.elements },
+  { path: "medals", label: dict.nav.medals },
+];
 
 export async function SiteHeader() {
   const [dict, locale] = await Promise.all([getDictionary(), lang()]);
   if (!hasLocale(locale)) return null;
 
   return (
-    <header className="relative z-20 border-b border-surface bg-white md:sticky md:top-0">
+    <header className="relative z-20 bg-header shadow-md md:sticky md:top-0">
       <div className="flex flex-wrap items-center justify-between gap-x-6 px-4 py-2 md:grid md:grid-cols-[1fr_auto_1fr] md:py-3">
         <Link
           href={`/${locale}/`}
           aria-label={dict.meta.title}
-          className="flex items-center gap-3"
+          className="justify-self-start"
         >
           <Image
-            src="/images/brand/armenian-gymnastics-federation-logo.png"
+            src="/images/brand/federation-logo-square.jpg"
             alt=""
-            width={48}
-            height={48}
+            width={56}
+            height={56}
+            className="mix-blend-multiply"
           />
-          <span className="hidden font-bold text-brand-deep md:inline">
-            {dict.meta.title}
-          </span>
         </Link>
         <SiteNav
           locale={locale}
           locales={locales}
-          labels={{
-            nav: dict.nav.label,
-            menu: dict.nav.menu,
-            about: dict.nav.about,
-          }}
+          items={navItems(dict)}
+          labels={{ nav: dict.nav.label, menu: dict.nav.menu }}
           languages={dict.languages}
         />
       </div>

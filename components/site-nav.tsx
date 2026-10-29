@@ -5,16 +5,19 @@ import { useEffect, useState } from "react";
 import type { Locale } from "@/app/[lang]/dictionaries";
 import { LanguageSwitcher } from "./language-switcher";
 
+export type NavItem = { path: string; label: string };
+
 type Props = {
   locale: Locale;
   locales: Locale[];
-  labels: { nav: string; menu: string; about: string };
+  items: NavItem[];
+  labels: { nav: string; menu: string };
   languages: Record<Locale, string>;
 };
 
 // Inline on md and up. On phones it collapses behind a burger button and opens as a card
 // at the top right over a dimmed page; tapping the dimmed area closes it.
-export function SiteNav({ locale, locales, labels, languages }: Props) {
+export function SiteNav({ locale, locales, items, labels, languages }: Props) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
 
@@ -63,15 +66,17 @@ export function SiteNav({ locale, locales, labels, languages }: Props) {
         className={`${open ? "flex" : "hidden"} fixed top-3 right-3 z-20 w-64 max-w-[calc(100vw-1.5rem)] flex-col items-end gap-4 rounded-2xl bg-white p-5 opacity-90 shadow-xl backdrop-blur-md md:contents`}
       >
         <ul className="flex flex-col items-end gap-4 md:flex-row">
-          <li>
-            <Link
-              href={`/${locale}/about/`}
-              onClick={close}
-              className="block py-1 text-brand hover:text-accent-deep"
-            >
-              {labels.about}
-            </Link>
-          </li>
+          {items.map(({ path, label }) => (
+            <li key={path}>
+              <Link
+                href={`/${locale}/${path}/`}
+                onClick={close}
+                className="block py-1 text-brand hover:text-accent-deep"
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
         <LanguageSwitcher
           current={locale}
