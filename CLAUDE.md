@@ -4,7 +4,7 @@
 
 Simple public information site about the Armenian Gymnastics Federation (`armgymnastics.am`). Planned v1 pages: Home, About, Disciplines, News, Contact (not final, discuss first). Client: Doping Space. Armenian + English. A sibling site (`echyerevan2027.com`, the 2027 European Championships in Yerevan) lives in a separate repo.
 
-Shared context for both sites: `../docs/project-context.md`. Context specific to this site (status, decision log, federation content notes): [docs/project-context.md](docs/project-context.md). Read both first. `docs/` is gitignored. Put site-specific notes here and cross-cutting ones in the parent `../docs/`; do not duplicate. Hosting notes for this domain are in `../docs/cpanel-armgymnastics.md`.
+Shared context for both sites: `../docs/project-context.md`. Context specific to this site (status, decision log, federation content notes): [docs/project-context.md](docs/project-context.md). Read both first. `docs/` is gitignored. Put site-specific notes here and cross-cutting ones in the parent `../docs/`; do not duplicate. Hosting notes for this domain are in `../docs/cpanel-armgymnastics.md`. Files received from the federation (content PDF, logo) live in `../files/arm-gymnastics/`, not in `docs/`.
 
 ## Hard constraints
 
