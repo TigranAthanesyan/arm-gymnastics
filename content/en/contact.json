@@ -1,0 +1,12 @@
+{
+  "locale": "en",
+  "organization": "Armenian Gymnastics Federation",
+  "address": {
+    "country": "Armenia",
+    "postalCode": "0001",
+    "city": "Yerevan",
+    "street": "3 Moskovyan St."
+  },
+  "email": "info@armgymnastics.am",
+  "note": "English version of hy/contact.json, written by the developer from the Armenian address. Street spelling to be confirmed by the federation."
+}

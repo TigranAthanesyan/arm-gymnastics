@@ -1,0 +1,42 @@
+{
+  "locale": "hy",
+  "competitions": {
+    "olympic-games": "Օլիմպիական խաղեր",
+    "world-championships": "Աշխարհի առաջնություն",
+    "european-championships": "Եվրոպայի առաջնություն",
+    "world-cup": "Աշխարհի գավաթ",
+    "world-cup-series": "Աշխարհի գավաթային փուլեր",
+    "european-games": "Եվրոպական խաղեր",
+    "universiade": "Համալսարանական խաղեր (Ունիվերսիադա)",
+    "world-junior-championships": "Աշխարհի երիտասարդների առաջնություն",
+    "european-junior-championships": "Եվրոպայի երիտասարդների առաջնություն"
+  },
+  "apparatus": {
+    "floor": "Ազատ վարժություններ",
+    "pommel-horse": "Նժույգ թափեր",
+    "rings": "Օղակներ",
+    "vault": "Հենացատկ",
+    "parallel-bars": "Զուգափայտ",
+    "horizontal-bar": "Պտտաձող",
+    "uneven-bars": "Տարբեր հավասարության ձողեր",
+    "balance-beam": "Հավասարակշռության գերան",
+    "team": "Թիմային",
+    "all-around": "Բազմամարտ"
+  },
+  "apparatusAbbreviations": {
+    "Նժ/թ": "pommel-horse",
+    "Նժ.թ.": "pommel-horse"
+  },
+  "medals": {
+    "gold": "ոսկե",
+    "silver": "արծաթե",
+    "bronze": "բրոնզե"
+  },
+  "titles": {
+    "overall-world-cup-winner": "Աշխարհի բացարծակ գավաթակիր"
+  },
+  "categories": {
+    "legend": "Լեգենդներ",
+    "independent-armenia": "Անկախ Հայաստանի մարմնամարզիկները"
+  }
+}

@@ -1,0 +1,1541 @@
+{
+  "schemaNote": "Language-neutral. Codes resolve to text through content/<locale>/labels.json. 'place' holds city names per locale (only hy filled).",
+  "source": "PDF pages 23-28, table 'Հայ մարմնամարզիկների նվաճումները'.",
+  "athletes": [
+    {
+      "slug": "hrant-shahinyan",
+      "name": {
+        "hy": "Հրանտ Շահինյան",
+        "en": "Hrant Shahinyan"
+      }
+    },
+    {
+      "slug": "albert-azaryan",
+      "name": {
+        "hy": "Ալբերտ Ազարյան",
+        "en": "Albert Azaryan"
+      }
+    },
+    {
+      "slug": "eduard-mikaelyan",
+      "name": {
+        "hy": "Էդվարդ Միքայելյան",
+        "en": "Eduard Mikaelyan"
+      }
+    },
+    {
+      "slug": "eduard-azaryan",
+      "name": {
+        "hy": "Էդուարդ Ազարյան",
+        "en": "Eduard Azaryan"
+      }
+    },
+    {
+      "slug": "artur-hakobyan",
+      "name": {
+        "hy": "Արթուր Հակոբյան",
+        "en": "Artur Hakobyan"
+      }
+    },
+    {
+      "slug": "vahagn-stepanyan",
+      "name": {
+        "hy": "Վահագն Ստեփանյան",
+        "en": "Vahagn Stepanyan"
+      }
+    },
+    {
+      "slug": "harutyun-merdinyan",
+      "name": {
+        "hy": "Հարություն Մերդինյան",
+        "en": "Harutyun Merdinyan"
+      }
+    },
+    {
+      "slug": "vahagn-davtyan",
+      "name": {
+        "hy": "Վահագն Դավթյան",
+        "en": "Vahagn Davtyan"
+      }
+    },
+    {
+      "slug": "artur-davtyan",
+      "name": {
+        "hy": "Արթուր Դավթյան",
+        "en": "Artur Davtyan"
+      }
+    },
+    {
+      "slug": "artur-avetisyan",
+      "name": {
+        "hy": "Արթուր Ավետիսյան",
+        "en": "Artur Avetisyan"
+      }
+    },
+    {
+      "slug": "gagik-khachikyan",
+      "name": {
+        "hy": "Գագիկ Խաչիկյան",
+        "en": "Gagik Khachikyan"
+      }
+    },
+    {
+      "slug": "erik-baghdasaryan",
+      "name": {
+        "hy": "Էրիկ Բաղդասարյան",
+        "en": "Erik Baghdasaryan"
+      }
+    },
+    {
+      "slug": "hamlet-manoukyan",
+      "name": {
+        "hy": "Համլետ Մանուկյան",
+        "en": "Hamlet Manoukyan"
+      }
+    },
+    {
+      "slug": "mamikon-khachatryan",
+      "name": {
+        "hy": "Մամիկոն Խաչատրյան",
+        "en": "Mamikon Khachatryan"
+      }
+    },
+    {
+      "slug": "huri-gebeshyan",
+      "name": {
+        "hy": "Հուրի Գեբեշյան",
+        "en": "Huri Gebeshyan"
+      }
+    }
+  ],
+  "medals": [
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "olympic-games",
+      "year": 1952,
+      "place": {
+        "hy": "Հելսինկի"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "olympic-games",
+      "year": 1952,
+      "place": {
+        "hy": "Հելսինկի"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "olympic-games",
+      "year": 1952,
+      "place": {
+        "hy": "Հելսինկի"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "olympic-games",
+      "year": 1952,
+      "place": {
+        "hy": "Հելսինկի"
+      },
+      "apparatus": "all-around",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "world-championships",
+      "year": 1954,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "world-championships",
+      "year": 1954,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "hrant-shahinyan",
+      "competition": "world-championships",
+      "year": 1954,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "all-around",
+      "medal": "bronze",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "olympic-games",
+      "year": 1956,
+      "place": {
+        "hy": "Մելբուռն"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "olympic-games",
+      "year": 1956,
+      "place": {
+        "hy": "Մելբուռն"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "olympic-games",
+      "year": 1960,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "olympic-games",
+      "year": 1960,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "team",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "world-championships",
+      "year": 1954,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "world-championships",
+      "year": 1954,
+      "place": {
+        "hy": "Հռոմ"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "world-championships",
+      "year": 1958,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "world-championships",
+      "year": 1958,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "world-championships",
+      "year": 1958,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "horizontal-bar",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "european-championships",
+      "year": 1955,
+      "place": {
+        "hy": "Ֆրանկֆուրտ"
+      },
+      "apparatus": "parallel-bars",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "european-championships",
+      "year": 1955,
+      "place": {
+        "hy": "Ֆրանկֆուրտ"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "albert-azaryan",
+      "competition": "european-championships",
+      "year": 1955,
+      "place": {
+        "hy": "Ֆրանկֆուրտ"
+      },
+      "apparatus": "all-around",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "eduard-mikaelyan",
+      "competition": "olympic-games",
+      "year": 1972,
+      "place": {
+        "hy": "Մյունխեն"
+      },
+      "apparatus": "team",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "eduard-mikaelyan",
+      "competition": "world-championships",
+      "year": 1974,
+      "place": {
+        "hy": "Վառնա"
+      },
+      "apparatus": "team",
+      "medal": "silver",
+      "sourcePage": 23
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "olympic-games",
+      "year": 1980,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "world-championships",
+      "year": 1978,
+      "place": {
+        "hy": "Ստրասբուրգ"
+      },
+      "apparatus": "team",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "world-cup",
+      "year": 1978,
+      "place": {
+        "hy": "Սան-Պաուլո"
+      },
+      "apparatus": "parallel-bars",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "world-cup",
+      "year": 1978,
+      "place": {
+        "hy": "Սան-Պաուլո"
+      },
+      "apparatus": "rings",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "world-cup",
+      "year": 1978,
+      "place": {
+        "hy": "Սան-Պաուլո"
+      },
+      "apparatus": "all-around",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "world-cup",
+      "year": 1979,
+      "place": {
+        "hy": "Տոկիո"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "eduard-azaryan",
+      "competition": "world-cup",
+      "year": 1980,
+      "place": {
+        "hy": "Տորոնտո"
+      },
+      "apparatus": "all-around",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1979,
+      "place": {
+        "hy": "Ֆորտ Ուերտ"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1981,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "team",
+      "medal": "gold",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1981,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1981,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "horizontal-bar",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1983,
+      "place": {
+        "hy": "Բուդապեշտ"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1983,
+      "place": {
+        "hy": "Բուդապեշտ"
+      },
+      "apparatus": "team",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "artur-hakobyan",
+      "competition": "world-championships",
+      "year": 1983,
+      "place": {
+        "hy": "Բուդապեշտ"
+      },
+      "apparatus": "all-around",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-championships",
+      "year": 2015,
+      "place": {
+        "hy": "Գլազգո"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Լիվերպուլ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "european-championships",
+      "year": 2016,
+      "place": {
+        "hy": "Բեռն"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "european-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Մյունխեն"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "european-championships",
+      "year": 2015,
+      "place": {
+        "hy": "Մոնպելյե"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "european-championships",
+      "year": 2011,
+      "place": {
+        "hy": "Բեռլին"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "european-championships",
+      "year": 2012,
+      "place": {
+        "hy": "Մոնպելյե"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "european-championships",
+      "year": 2017,
+      "place": {
+        "hy": "Կլուժ-Նապոկա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 24
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-cup-series",
+      "year": 2006,
+      "place": {
+        "hy": "Թեհրան"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-cup-series",
+      "year": 2006,
+      "place": {
+        "hy": "Լիոն"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-cup-series",
+      "year": 2008,
+      "place": {
+        "hy": "Շտուտգարդ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "harutyun-merdinyan",
+      "competition": "world-cup-series",
+      "year": 2023,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "rings",
+      "medal": "gold"
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2024,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2024,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "rings",
+      "medal": "gold"
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2024,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "european-championships",
+      "year": 2023,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "european-championships",
+      "year": 2019,
+      "place": {
+        "hy": "Շչեցին"
+      },
+      "apparatus": "rings",
+      "medal": "bronze",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "european-games",
+      "year": 2019,
+      "place": {
+        "hy": "Մինսկ"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "world-cup-series",
+      "year": 2019,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "competition": "european-championships",
+      "year": 2016,
+      "place": {
+        "hy": "Բեռն"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Ռոտերդամ"
+      },
+      "apparatus": "vault",
+      "medal": "gold"
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "olympic-games",
+      "year": 2024,
+      "place": {
+        "hy": "Փարիզ"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "olympic-games",
+      "year": 2020,
+      "place": {
+        "hy": "Տոկիո"
+      },
+      "apparatus": "vault",
+      "medal": "bronze",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Լիվերպուլ"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-championships",
+      "year": 2025,
+      "place": {
+        "hy": "Ջակարտա"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 25
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2021,
+      "place": {
+        "hy": "Բազել"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2023,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2025,
+      "place": {
+        "hy": "Լայպցիգ"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2016,
+      "place": {
+        "hy": "Բեռն"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Մյունխեն"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2024,
+      "place": {
+        "hy": "Ռիմինի"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2013,
+      "place": {
+        "hy": "Մոսկվա"
+      },
+      "apparatus": "vault",
+      "medal": "bronze",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-championships",
+      "year": 2023,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "european-games",
+      "year": 2019,
+      "place": {
+        "hy": "Մինսկ"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2024,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2023,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2023,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2023,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2020,
+      "place": {
+        "hy": "Մելբուռն"
+      },
+      "apparatus": "vault",
+      "medal": "gold",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2019,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "vault",
+      "medal": "bronze",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Օսիյեկ"
+      },
+      "apparatus": "vault",
+      "medal": "silver",
+      "sourcePage": 26
+    },
+    {
+      "athlete": "artur-davtyan",
+      "competition": "world-cup-series",
+      "year": 2015,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "vault",
+      "medal": "bronze",
+      "sourcePage": 26,
+      "sourceNote": "Apparatus not stated in the source table; vault assumed."
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Ռոտերդամ"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "european-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Զագրեբ"
+      },
+      "apparatus": "rings",
+      "medal": "gold"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Օսիյեկ"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "european-championships",
+      "year": 2025,
+      "place": {
+        "hy": "Լայպցիգ"
+      },
+      "apparatus": "rings",
+      "medal": "bronze",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Օսիյեկ"
+      },
+      "apparatus": "rings",
+      "medal": "bronze",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "rings",
+      "medal": "gold"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2023,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2023,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "rings",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "world-cup-series",
+      "year": 2022,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "rings",
+      "medal": "silver"
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "universiade",
+      "year": 2019,
+      "place": {
+        "hy": "Նեապոլ"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "competition": "european-junior-championships",
+      "year": 2016,
+      "place": {
+        "hy": "Բեռն"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "gagik-khachikyan",
+      "competition": "european-junior-championships",
+      "year": 2018,
+      "place": {
+        "hy": "Գլազգո"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "erik-baghdasaryan",
+      "competition": "european-junior-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Մյունխեն"
+      },
+      "apparatus": "parallel-bars",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Ռոտերդամ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold"
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "european-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Զագրեբ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver"
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold"
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Օսիյեկ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold"
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "european-junior-championships",
+      "year": 2024,
+      "place": {
+        "hy": "Ռիմինի"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold"
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "european-championships",
+      "year": 2025,
+      "place": {
+        "hy": "Լայպցիգ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Օսիյեկ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Դոհա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-cup-series",
+      "year": 2025,
+      "place": {
+        "hy": "Կաիրե"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "universiade",
+      "year": 2025,
+      "place": {
+        "hy": "Էսեն"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "european-junior-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Մյունխեն"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "european-junior-championships",
+      "year": 2022,
+      "place": {
+        "hy": "Մյունխեն"
+      },
+      "apparatus": "rings",
+      "medal": "silver",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-junior-championships",
+      "year": 2023,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "hamlet-manoukyan",
+      "competition": "world-junior-championships",
+      "year": 2023,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "rings",
+      "medal": "gold",
+      "sourcePage": 27
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "world-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Ռոտերդամ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "european-championships",
+      "year": 2026,
+      "place": {
+        "hy": "Զագրեբ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze"
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "world-cup-series",
+      "year": 2026,
+      "place": {
+        "hy": "Կոտբուս"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver"
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "world-championships",
+      "year": 2025,
+      "place": {
+        "hy": "Ջակարտա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 28
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "european-championships",
+      "year": 2025,
+      "place": {
+        "hy": "Լայպցիգ"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 28
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "world-junior-championships",
+      "year": 2023,
+      "place": {
+        "hy": "Անթալյա"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "silver",
+      "sourcePage": 28
+    },
+    {
+      "athlete": "mamikon-khachatryan",
+      "competition": "european-junior-championships",
+      "year": 2024,
+      "place": {
+        "hy": "Ռիմինի"
+      },
+      "apparatus": "pommel-horse",
+      "medal": "bronze",
+      "sourcePage": 28
+    }
+  ],
+  "titles": [
+    {
+      "athlete": "artur-davtyan",
+      "title": "overall-world-cup-winner",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2026
+      ],
+      "sourcePage": 26
+    },
+    {
+      "athlete": "vahagn-davtyan",
+      "title": "overall-world-cup-winner",
+      "years": [
+        2022,
+        2024
+      ],
+      "sourcePage": 25,
+      "sourceNote": "Listed as '2022 Աշխարհի բացարծակ գավաթակիր' and '2024 Աշխարհի բացարծակ գավաթակիր' in the table (rings)."
+    },
+    {
+      "athlete": "artur-avetisyan",
+      "title": "overall-world-cup-winner",
+      "years": [
+        2026
+      ],
+      "sourcePage": 27
+    }
+  ]
+}

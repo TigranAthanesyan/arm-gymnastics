@@ -1,0 +1,176 @@
+{
+  "note": "Image files are in public/images/; \"file\" is relative to it. Alt text per language is in content/<locale>/images.json.",
+  "images": [
+    {
+      "id": "shahinyan-portrait",
+      "file": "athletes/hrant-shahinyan/hrant-shahinyan-portrait.jpg",
+      "width": 544,
+      "height": 728,
+      "sourcePage": 5,
+      "subject": "hrant-shahinyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "shahinyan-fact-two-gymnasts",
+      "file": "athletes/hrant-shahinyan/hrant-shahinyan-medal-anecdote.jpg",
+      "width": 586,
+      "height": 775,
+      "sourcePage": 6,
+      "subject": "hrant-shahinyan",
+      "kind": "fact"
+    },
+    {
+      "id": "azaryan-portrait",
+      "file": "athletes/albert-azaryan/albert-azaryan-portrait.jpg",
+      "width": 561,
+      "height": 790,
+      "sourcePage": 7,
+      "subject": "albert-azaryan",
+      "kind": "portrait"
+    },
+    {
+      "id": "azaryan-rings-bw",
+      "file": "athletes/albert-azaryan/albert-azaryan-rings-bw.jpg",
+      "width": 403,
+      "height": 556,
+      "sourcePage": 8,
+      "subject": "albert-azaryan",
+      "kind": "action"
+    },
+    {
+      "id": "azaryan-trophies",
+      "file": "athletes/albert-azaryan/albert-azaryan-trophies.jpg",
+      "width": 412,
+      "height": 457,
+      "sourcePage": 9,
+      "subject": "albert-azaryan",
+      "kind": "portrait"
+    },
+    {
+      "id": "azaryan-and-son",
+      "file": "athletes/albert-azaryan/albert-and-eduard-azaryan.jpg",
+      "width": 463,
+      "height": 369,
+      "sourcePage": 9,
+      "subject": "albert-azaryan",
+      "kind": "family"
+    },
+    {
+      "id": "azaryan-statue",
+      "file": "athletes/albert-azaryan/albert-azaryan-statue-2022.jpg",
+      "width": 447,
+      "height": 520,
+      "sourcePage": 11,
+      "subject": "albert-azaryan",
+      "kind": "event"
+    },
+    {
+      "id": "vanoyan-and-azaryan",
+      "file": "federation/gagik-vanoyan-and-albert-azaryan.jpg",
+      "width": 443,
+      "height": 443,
+      "sourcePage": 10,
+      "subject": "federation",
+      "kind": "group"
+    },
+    {
+      "id": "stepanyan-portrait",
+      "file": "athletes/vahagn-stepanyan/vahagn-stepanyan-portrait.jpg",
+      "width": 480,
+      "height": 599,
+      "sourcePage": 12,
+      "subject": "vahagn-stepanyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "merdinyan-portrait",
+      "file": "athletes/harutyun-merdinyan/harutyun-merdinyan-portrait.jpg",
+      "width": 498,
+      "height": 672,
+      "sourcePage": 13,
+      "subject": "harutyun-merdinyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "merdinyan-bouquet",
+      "file": "athletes/harutyun-merdinyan/harutyun-merdinyan-bouquet-2016.jpg",
+      "width": 911,
+      "height": 501,
+      "sourcePage": 14,
+      "subject": "harutyun-merdinyan",
+      "kind": "event"
+    },
+    {
+      "id": "a-davtyan-portrait",
+      "file": "athletes/artur-davtyan/artur-davtyan-portrait.jpg",
+      "width": 498,
+      "height": 696,
+      "sourcePage": 15,
+      "subject": "artur-davtyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "a-davtyan-medal",
+      "file": "athletes/artur-davtyan/artur-davtyan-world-championships-liverpool-2022-gold-medal.jpg",
+      "width": 240,
+      "height": 242,
+      "sourcePage": 15,
+      "subject": "artur-davtyan",
+      "kind": "medal"
+    },
+    {
+      "id": "v-davtyan-portrait",
+      "file": "athletes/vahagn-davtyan/vahagn-davtyan-portrait.jpg",
+      "width": 504,
+      "height": 614,
+      "sourcePage": 16,
+      "subject": "vahagn-davtyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "avetisyan-portrait",
+      "file": "athletes/artur-avetisyan/artur-avetisyan-portrait.jpg",
+      "width": 558,
+      "height": 724,
+      "sourcePage": 17,
+      "subject": "artur-avetisyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "manoukyan-portrait",
+      "file": "athletes/hamlet-manoukyan/hamlet-manoukyan-portrait.jpg",
+      "width": 504,
+      "height": 614,
+      "sourcePage": 18,
+      "subject": "hamlet-manoukyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "khachatryan-portrait",
+      "file": "athletes/mamikon-khachatryan/mamikon-khachatryan-portrait.jpg",
+      "width": 505,
+      "height": 625,
+      "sourcePage": 19,
+      "subject": "mamikon-khachatryan",
+      "kind": "portrait"
+    },
+    {
+      "id": "serobyan-portrait",
+      "file": "athletes/hakob-serobyan/hakob-serobyan-portrait.jpg",
+      "width": 493,
+      "height": 597,
+      "sourcePage": 20,
+      "subject": "hakob-serobyan",
+      "kind": "portrait"
+    },
+    {
+      "id": "federation-logo",
+      "file": "brand/armenian-gymnastics-federation-logo.png",
+      "width": 225,
+      "height": 225,
+      "sourcePage": 1,
+      "subject": "federation",
+      "kind": "logo"
+    }
+  ]
+}

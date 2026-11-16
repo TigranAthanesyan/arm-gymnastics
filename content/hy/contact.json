@@ -1,0 +1,13 @@
+{
+  "locale": "hy",
+  "organization": "Հայաստանի մարմնամարզության ֆեդերացիա",
+  "address": {
+    "country": "Հայաստան",
+    "postalCode": "0001",
+    "city": "Երևան",
+    "street": "Մոսկովյան փող., 3 շենք"
+  },
+  "email": "info@armgymnastics.am",
+  "sourcePage": 28,
+  "note": "The PDF listed armgymnastics@gmail.com; the client gave info@armgymnastics.am as the public contact email on 2026-10-23, so that one is used."
+}
