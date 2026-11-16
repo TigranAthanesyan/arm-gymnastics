@@ -17,6 +17,14 @@
   /* Background disc of the logo, so the logo blends into the header */
   --color-fed-blush: #fcf2fb;
 
+  /* Dark stage colour for heroes and page headers (the portraits are dark and warm, so they sit well on it) */
+  --color-fed-night: #0c1230;
+
+  /* Medal colours */
+  --color-medal-gold: #d4a017;
+  --color-medal-silver: #9aa0a6;
+  --color-medal-bronze: #b0703c;
+
   /* Brand font is not chosen yet; Noto Sans Armenian covers hy and Latin falls back to the system font */
   --font-sans: "Noto Sans Armenian", system-ui, sans-serif;
 }
@@ -31,6 +39,7 @@
   --color-surface: var(--color-fed-grey);
   --color-ink: var(--color-fed-ink);
   --color-header: var(--color-fed-blush);
+  --color-night: var(--color-fed-night);
 }
 
 /* Temporary page defaults until the design is decided */
@@ -42,5 +51,54 @@ body {
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+}
+
+/* Entrance animation for heroes and page headers; skipped when the visitor prefers reduced motion */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+}
+
+/* Mobile menu: card eases in from its top-right corner, overlay fades in */
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu-in {
+    transform-origin: top right;
+    animation: menu-in 0.18s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+  .fade-in {
+    animation: fade-in 0.18s ease-out both;
   }
 }

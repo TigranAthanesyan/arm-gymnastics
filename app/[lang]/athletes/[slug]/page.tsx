@@ -2,6 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { lang } from "next/root-params";
 import { Blocks } from "@/components/blocks";
+import { medalDot } from "@/components/medal-tiles";
+import { ProfileHero, ProfileNav } from "@/components/profile";
+import { getImage } from "@/lib/content";
 import { getAthletes, getMedals, getTitles } from "@/lib/athletes";
 import { defaultLocale, getDictionary, locales } from "../../dictionaries";
 
@@ -58,93 +61,161 @@ export default async function Athlete({
   const medals = getMedals(slug, locale);
   const titles = getTitles(slug);
 
-  return (
-    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-10">
-      {back}
-      <h1 className="mt-4 text-3xl font-bold text-brand-deep">
-        {athlete.name}
-      </h1>
-      <p className="mt-1 mb-6 text-sm">
-        {[
-          athlete.born && athlete.died
-            ? `${year(athlete.born)}–${year(athlete.died)}`
-            : athlete.born
-              ? `${dict.athletes.born} ${year(athlete.born)}`
-              : athlete.died
-                ? `† ${year(athlete.died)}`
-                : null,
-          athlete.specialty.map((s) => labels.apparatus[s]).join(", "),
-        ]
-          .filter(Boolean)
-          .join(" · ")}
-      </p>
-      <Blocks blocks={athlete.blocks} lang={locale} />
+  const portraitId = athlete.images[0];
+  const portrait = portraitId ? getImage(portraitId, locale) : null;
+  const blocks = athlete.blocks.filter(
+    (b) => !(b.type === "image" && b.ref === portraitId),
+  );
+  const lifespan =
+    athlete.born && athlete.died
+      ? `${year(athlete.born)}–${year(athlete.died)}`
+      : athlete.born
+        ? `${dict.athletes.born} ${year(athlete.born)}`
+        : athlete.died
+          ? `† ${year(athlete.died)}`
+          : null;
+  const count = (medal: string) =>
+    medals.filter((m) => m.medal === medal).length;
+  const hasAchievements = medals.length > 0 || titles.length > 0;
 
-      {(medals.length > 0 || titles.length > 0) && (
-        <section className="mt-10">
-          <h2 className="mb-3 text-2xl font-bold text-brand-deep">
-            {dict.athletes.achievements}
-          </h2>
-          {titles.length > 0 && (
-            <ul className="mb-4 space-y-1">
-              {titles.map(({ title, years }) => (
-                <li key={title} className="font-bold">
-                  {labels.titles[title]}: {years.join(", ")}
-                </li>
-              ))}
-            </ul>
+  return (
+    <main className="flex-1">
+      <ProfileHero
+        backHref={`/${locale}/athletes/`}
+        backLabel={dict.athletes.all}
+        name={athlete.name}
+        chips={[
+          ...(lifespan ? [lifespan] : []),
+          ...athlete.specialty.map((s) => labels.apparatus[s]),
+        ]}
+        portrait={portrait}
+      />
+
+      <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <div
+          className={
+            hasAchievements
+              ? "grid gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14"
+              : "mx-auto max-w-3xl"
+          }
+        >
+          <article>
+            <Blocks blocks={blocks} lang={locale} lede />
+          </article>
+
+          {hasAchievements && (
+            <aside className="lg:sticky lg:top-28 lg:self-start">
+              <div className="rounded-2xl bg-night p-6 text-white shadow-xl">
+                <h2 className="text-lg font-bold">
+                  {dict.athletes.achievements}
+                </h2>
+                {medals.length > 0 && (
+                  <dl className="mt-4 grid grid-cols-3 gap-2 text-center">
+                    {["gold", "silver", "bronze"].map((medal) => (
+                      <div
+                        key={medal}
+                        className="rounded-xl bg-white/10 px-1 py-3"
+                      >
+                        <dd className="text-3xl font-bold">{count(medal)}</dd>
+                        <dt className="mt-1 flex items-center justify-center gap-1.5 text-xs text-white/80">
+                          <span
+                            aria-hidden="true"
+                            className={`size-2.5 rounded-full ${medalDot[medal]}`}
+                          />
+                          {labels.medals[medal]}
+                        </dt>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+                {titles.length > 0 && (
+                  <ul className="mt-4 space-y-2">
+                    {titles.map(({ title, years }) => (
+                      <li
+                        key={title}
+                        className="rounded-xl bg-linear-to-r from-highlight/90 to-accent/90 px-4 py-3 text-sm leading-snug font-bold"
+                      >
+                        {labels.titles[title]}
+                        <span className="block font-normal text-white/90">
+                          {years.join(", ")}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </aside>
           )}
-          {medals.length > 0 && (
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-xl border-collapse text-left text-sm">
-                <thead>
-                  <tr className="border-b-2 border-brand">
-                    <th className="py-2 pr-3">{dict.athletes.year}</th>
-                    <th className="py-2 pr-3">{dict.athletes.competition}</th>
-                    <th className="py-2 pr-3">{dict.athletes.place}</th>
-                    <th className="py-2 pr-3">{dict.athletes.apparatus}</th>
-                    <th className="py-2">{dict.athletes.medal}</th>
+        </div>
+
+        {medals.length > 0 && (
+          <section className="mt-16">
+            <h2 className="mb-6 text-3xl font-bold text-brand-deep">
+              {dict.athletes.achievements}
+            </h2>
+            <div className="overflow-x-auto rounded-2xl ring-1 ring-black/10">
+              <table className="w-full min-w-xl border-collapse text-left">
+                <thead className="bg-brand-deep text-sm text-white">
+                  <tr>
+                    <th className="px-4 py-3">{dict.athletes.year}</th>
+                    <th className="px-4 py-3">{dict.athletes.competition}</th>
+                    <th className="px-4 py-3">{dict.athletes.place}</th>
+                    <th className="px-4 py-3">{dict.athletes.apparatus}</th>
+                    <th className="px-4 py-3">{dict.athletes.medal}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {medals.map((m, i) => (
-                    <tr key={i} className="border-b border-surface">
-                      <td className="py-2 pr-3">{m.year}</td>
-                      <td className="py-2 pr-3">
+                    <tr
+                      key={i}
+                      className="border-b border-surface last:border-0 even:bg-surface/60"
+                    >
+                      <td className="px-4 py-3 font-bold text-brand-deep">
+                        {m.year}
+                      </td>
+                      <td className="px-4 py-3">
                         {labels.competitions[m.competition]}
                       </td>
-                      <td className="py-2 pr-3">{m.place}</td>
-                      <td className="py-2 pr-3">
+                      <td className="px-4 py-3">{m.place}</td>
+                      <td className="px-4 py-3">
                         {labels.apparatus[m.apparatus]}
                       </td>
-                      <td className="py-2">{labels.medals[m.medal]}</td>
+                      <td className="px-4 py-3">
+                        <span className="inline-flex items-center gap-2">
+                          <span
+                            aria-hidden="true"
+                            className={`size-3 rounded-full ${medalDot[m.medal]}`}
+                          />
+                          {labels.medals[m.medal]}
+                        </span>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          )}
-        </section>
-      )}
+          </section>
+        )}
 
-      <div className="min-h-12 flex-1" />
-      <nav className="mt-auto flex justify-between gap-4 border-t border-surface pt-4">
-        {previous ? (
-          <Link href={`/${locale}/athletes/${previous.slug}/`} className={link}>
-            ← {dict.athletes.previous}: {previous.name}
-          </Link>
-        ) : (
-          <span />
-        )}
-        {next && (
-          <Link
-            href={`/${locale}/athletes/${next.slug}/`}
-            className={`${link} text-right`}
-          >
-            {dict.athletes.next}: {next.name} →
-          </Link>
-        )}
-      </nav>
+        <ProfileNav
+          previous={
+            previous && {
+              href: `/${locale}/athletes/${previous.slug}/`,
+              name: previous.name,
+              image: previous.images[0] ? getImage(previous.images[0], locale) : null,
+            }
+          }
+          next={
+            next && {
+              href: `/${locale}/athletes/${next.slug}/`,
+              name: next.name,
+              image: next.images[0] ? getImage(next.images[0], locale) : null,
+            }
+          }
+          previousLabel={dict.athletes.previous}
+          nextLabel={dict.athletes.next}
+        />
+      </div>
     </main>
   );
 }

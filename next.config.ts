@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   // The default image optimizer needs a server.
   images: { unoptimized: true },
+  devIndicators: false,
   turbopack: {
     rules: {
       "*.css": {

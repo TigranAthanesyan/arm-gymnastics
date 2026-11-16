@@ -5,6 +5,8 @@ import {
   getAllTitles,
   getAthletes,
 } from "@/lib/athletes";
+import { MedalTiles, medalDot } from "@/components/medal-tiles";
+import { PageHeader } from "@/components/profile";
 import { getDictionary, hasLocale, locales } from "../dictionaries";
 
 export function generateStaticParams() {
@@ -16,12 +18,6 @@ export async function generateMetadata() {
   return { title: dict.nav.medals };
 }
 
-const medalDot: Record<string, string> = {
-  gold: "bg-[#d4a017]",
-  silver: "bg-[#9aa0a6]",
-  bronze: "bg-[#b0703c]",
-};
-
 export default async function Medals() {
   const [{ athletes, labels }, dict, locale] = await Promise.all([
     getAthletes(),
@@ -30,15 +26,12 @@ export default async function Medals() {
   ]);
   if (!hasLocale(locale)) return null;
 
-  const heading = (
-    <h1 className="text-3xl font-bold text-brand-deep">{dict.nav.medals}</h1>
-  );
   // Medal and competition labels exist per locale; without them the page has nothing to show.
   if (athletes.length === 0) {
     return (
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
-        {heading}
-        <p className="mt-6">{dict.medals.empty}</p>
+      <main className="flex-1">
+        <PageHeader title={dict.nav.medals} />
+        <p className="mx-auto max-w-6xl px-4 py-12">{dict.medals.empty}</p>
       </main>
     );
   }
@@ -54,92 +47,100 @@ export default async function Medals() {
   );
 
   return (
-    <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
-      {heading}
+    <main className="flex-1">
+      <PageHeader title={dict.nav.medals}>
+        <MedalTiles
+          counts={{
+            gold: count("gold"),
+            silver: count("silver"),
+            bronze: count("bronze"),
+          }}
+          labels={labels.medals}
+        />
+      </PageHeader>
 
-      <dl className="mt-6 grid grid-cols-3 gap-3 text-center">
-        {["gold", "silver", "bronze"].map((medal) => (
-          <div key={medal} className="rounded-lg bg-surface p-4">
-            <dt className="flex items-center justify-center gap-2 text-sm">
-              <span
-                aria-hidden="true"
-                className={`size-3 rounded-full ${medalDot[medal]}`}
-              />
-              {labels.medals[medal]}
-            </dt>
-            <dd className="text-3xl font-bold text-brand-deep">
-              {count(medal)}
-            </dd>
-          </div>
-        ))}
-      </dl>
+      <div className="mx-auto max-w-6xl px-4 pb-16">
+        {titles.length > 0 && (
+          <ul className="mt-12 grid gap-4 md:grid-cols-2">
+            {titles.map(({ athlete, title, years }) => (
+              <li
+                key={`${athlete}-${title}`}
+                className="rounded-2xl bg-linear-to-r from-highlight to-accent p-5 font-bold text-white shadow-lg"
+              >
+                {labels.titles[title]}
+                <span className="mt-1 block text-lg">
+                  {nameOf.get(athlete)}{" "}
+                  <span className="font-normal">({years.join(", ")})</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
 
-      {titles.length > 0 && (
-        <ul className="mt-6 space-y-1">
-          {titles.map(({ athlete, title, years }) => (
-            <li key={`${athlete}-${title}`} className="font-bold">
-              {labels.titles[title]}: {nameOf.get(athlete)} ({years.join(", ")})
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {competitions.map((competition) => {
-        const rows = medals.filter((m) => m.competition === competition);
-        return (
-          <section key={competition} className="mt-10">
-            <h2 className="mb-3 text-2xl font-bold text-brand-deep">
-              {labels.competitions[competition]}{" "}
-              <span className="text-base font-normal">({rows.length})</span>
-            </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-xl border-collapse text-left text-sm">
-                <thead>
-                  <tr className="border-b-2 border-brand">
-                    <th className="py-2 pr-3">{dict.athletes.year}</th>
-                    <th className="py-2 pr-3">{dict.medals.athlete}</th>
-                    <th className="py-2 pr-3">{dict.athletes.apparatus}</th>
-                    <th className="py-2 pr-3">{dict.athletes.place}</th>
-                    <th className="py-2">{dict.athletes.medal}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rows.map((m, i) => (
-                    <tr key={i} className="border-b border-surface">
-                      <td className="py-2 pr-3">{m.year}</td>
-                      <td className="py-2 pr-3">
-                        {profiles.has(m.athlete) ? (
-                          <Link
-                            href={`/${locale}/athletes/${m.athlete}/`}
-                            className="text-brand underline hover:text-accent-deep"
-                          >
-                            {m.athleteName}
-                          </Link>
-                        ) : (
-                          m.athleteName
-                        )}
-                      </td>
-                      <td className="py-2 pr-3">
-                        {labels.apparatus[m.apparatus]}
-                      </td>
-                      <td className="py-2 pr-3">{m.place}</td>
-                      <td className="py-2">
-                        <span className="inline-flex items-center gap-2">
-                          <span
-                            aria-hidden="true"
-                            className={`size-3 rounded-full ${medalDot[m.medal]}`}
-                          />
-                          {labels.medals[m.medal]}
-                        </span>
-                      </td>
+        {competitions.map((competition) => {
+          const rows = medals.filter((m) => m.competition === competition);
+          return (
+            <section key={competition} className="mt-14">
+              <h2 className="mb-5 flex items-baseline gap-3 text-2xl font-bold text-brand-deep md:text-3xl">
+                {labels.competitions[competition]}
+                <span className="rounded-full bg-surface px-3 py-0.5 text-base font-normal">
+                  {rows.length}
+                </span>
+              </h2>
+              <div className="overflow-x-auto rounded-2xl ring-1 ring-black/10">
+                <table className="w-full min-w-xl border-collapse text-left">
+                  <thead className="bg-brand-deep text-sm text-white">
+                    <tr>
+                      <th className="px-4 py-3">{dict.athletes.year}</th>
+                      <th className="px-4 py-3">{dict.medals.athlete}</th>
+                      <th className="px-4 py-3">{dict.athletes.apparatus}</th>
+                      <th className="px-4 py-3">{dict.athletes.place}</th>
+                      <th className="px-4 py-3">{dict.athletes.medal}</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        );
-      })}
+                  </thead>
+                  <tbody>
+                    {rows.map((m, i) => (
+                      <tr
+                        key={i}
+                        className="border-b border-surface last:border-0 even:bg-surface/60"
+                      >
+                        <td className="px-4 py-3 font-bold text-brand-deep">
+                          {m.year}
+                        </td>
+                        <td className="px-4 py-3">
+                          {profiles.has(m.athlete) ? (
+                            <Link
+                              href={`/${locale}/athletes/${m.athlete}/`}
+                              className="font-bold text-brand underline-offset-4 hover:text-accent-deep hover:underline"
+                            >
+                              {m.athleteName}
+                            </Link>
+                          ) : (
+                            m.athleteName
+                          )}
+                        </td>
+                        <td className="px-4 py-3">
+                          {labels.apparatus[m.apparatus]}
+                        </td>
+                        <td className="px-4 py-3">{m.place}</td>
+                        <td className="px-4 py-3">
+                          <span className="inline-flex items-center gap-2">
+                            <span
+                              aria-hidden="true"
+                              className={`size-3 rounded-full ${medalDot[m.medal]}`}
+                            />
+                            {labels.medals[m.medal]}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          );
+        })}
+      </div>
     </main>
   );
 }

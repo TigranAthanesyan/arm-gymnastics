@@ -6,7 +6,9 @@ const en = {
   },
   nav: {
     label: "Main",
+    home: "Home",
     menu: "Menu",
+    close: "Close menu",
     about: "About",
     athletes: "Athletes",
     coaches: "Coaches",

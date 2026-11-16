@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { lang } from "next/root-params";
+import { PageHeader, ProfileCard } from "@/components/profile";
 import { getImage } from "@/lib/content";
 import { getCoaches } from "@/lib/coaches";
 import { getDictionary, locales } from "../dictionaries";
@@ -22,40 +21,25 @@ export default async function Coaches() {
   ]);
 
   return (
-    <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
-      <h1 className="text-3xl font-bold text-brand-deep">{dict.nav.coaches}</h1>
-      {coaches.length === 0 && <p className="mt-6">{dict.coaches.empty}</p>}
-      <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-        {coaches.map((coach) => {
-          const portrait = coach.images[0]
-            ? getImage(coach.images[0], locale)
-            : null;
-          return (
+    <main className="flex-1">
+      <PageHeader title={dict.nav.coaches} />
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        {coaches.length === 0 && <p>{dict.coaches.empty}</p>}
+        <ul className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+          {coaches.map((coach) => (
             <li key={coach.slug}>
-              <Link
+              <ProfileCard
                 href={`/${locale}/coaches/${coach.slug}/`}
-                className="group block h-full overflow-hidden rounded-lg bg-surface"
-              >
-                {portrait && (
-                  <Image
-                    src={portrait.src}
-                    width={portrait.width}
-                    height={portrait.height}
-                    alt={portrait.alt}
-                    className="aspect-3/4 w-full object-cover object-top"
-                  />
-                )}
-                <span className="block p-3">
-                  <span className="block font-bold text-brand group-hover:text-accent-deep">
-                    {coach.name}
-                  </span>
-                  <span className="block text-sm">{coach.role}</span>
-                </span>
-              </Link>
+                name={coach.name}
+                subtitle={coach.role}
+                portrait={
+                  coach.images[0] ? getImage(coach.images[0], locale) : null
+                }
+              />
             </li>
-          );
-        })}
-      </ul>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }

@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { lang } from "next/root-params";
+import { PageHeader, ProfileCard } from "@/components/profile";
 import { getAthletes } from "@/lib/athletes";
 import { getImage } from "@/lib/content";
 import { getDictionary, locales } from "../dictionaries";
@@ -25,55 +24,51 @@ export default async function Athletes() {
   const categories = [...new Set(athletes.map((a) => a.category))];
 
   return (
-    <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-10">
-      <h1 className="text-3xl font-bold text-brand-deep">
-        {dict.nav.athletes}
-      </h1>
-      {athletes.length === 0 && <p className="mt-6">{dict.athletes.empty}</p>}
-      {categories.map((category) => (
-        <section key={category} className="mt-10">
-          <h2 className="mb-4 text-2xl font-bold">
-            {labels.categories[category]}
-          </h2>
-          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-            {athletes
-              .filter((a) => a.category === category)
-              .map((athlete) => {
-                const portrait = athlete.images[0]
-                  ? getImage(athlete.images[0], locale)
-                  : null;
-                return (
+    <main className="flex-1">
+      <PageHeader title={dict.nav.athletes} />
+      <div className="mx-auto max-w-6xl px-4 pb-16">
+        {athletes.length === 0 && (
+          <p className="mt-10">{dict.athletes.empty}</p>
+        )}
+        {categories.map((category, index) => (
+          <section key={category} className="mt-12">
+            <h2 className="mb-6 flex items-center gap-4 text-2xl font-bold text-brand-deep md:text-3xl">
+              {labels.categories[category]}
+              <span
+                aria-hidden="true"
+                className="h-px flex-1 bg-linear-to-r from-brand/40 to-transparent"
+              />
+            </h2>
+            <ul
+              className={
+                index === 0
+                  ? "grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6"
+                  : "grid grid-cols-2 gap-4 md:grid-cols-4"
+              }
+            >
+              {athletes
+                .filter((a) => a.category === category)
+                .map((athlete) => (
                   <li key={athlete.slug}>
-                    <Link
+                    <ProfileCard
+                      featured={index === 0}
                       href={`/${locale}/athletes/${athlete.slug}/`}
-                      className="group block overflow-hidden rounded-lg bg-surface"
-                    >
-                      {portrait && (
-                        <Image
-                          src={portrait.src}
-                          width={portrait.width}
-                          height={portrait.height}
-                          alt={portrait.alt}
-                          className="aspect-3/4 w-full object-cover object-top"
-                        />
-                      )}
-                      <span className="block p-3">
-                        <span className="block font-bold text-brand group-hover:text-accent-deep">
-                          {athlete.name}
-                        </span>
-                        <span className="block text-sm">
-                          {athlete.specialty
-                            .map((s) => labels.apparatus[s])
-                            .join(", ")}
-                        </span>
-                      </span>
-                    </Link>
+                      name={athlete.name}
+                      subtitle={athlete.specialty
+                        .map((s) => labels.apparatus[s])
+                        .join(", ")}
+                      portrait={
+                        athlete.images[0]
+                          ? getImage(athlete.images[0], locale)
+                          : null
+                      }
+                    />
                   </li>
-                );
-              })}
-          </ul>
-        </section>
-      ))}
+                ))}
+            </ul>
+          </section>
+        ))}
+      </div>
     </main>
   );
 }

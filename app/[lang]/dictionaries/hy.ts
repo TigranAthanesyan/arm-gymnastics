@@ -9,7 +9,9 @@ const hy: Dictionary = {
   },
   nav: {
     label: "Գլխավոր",
+    home: "Գլխավոր",
     menu: "Ընտրացանկ",
+    close: "Փակել ընտրացանկը",
     about: "Մեր մասին",
     athletes: "Մարզիկներ",
     coaches: "Մարզիչներ",
